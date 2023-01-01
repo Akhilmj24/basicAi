@@ -67,14 +67,7 @@ app.post("/editText", async (req, res) => {
     });
   }
 });
-app.post("/posttest", async (req, res) => {
-  const { text } = req.body;
 
-  res.json({
-    data: text,
-    status: false,
-  });
-});
 app.post("/imgecrt", async (req, res) => {
   const { text } = req.body;
   const response = await openai.createImage({
@@ -84,12 +77,12 @@ app.post("/imgecrt", async (req, res) => {
   });
   if (response.status === 200) {
     res.json({
-      data: response.data.data,
+      data: "response.data.data",
       status: true,
     });
   } else {
     res.json({
-      data: response.data.data,
+      data: "response.data.data",
       status: false,
     });
   }
