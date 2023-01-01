@@ -94,6 +94,12 @@ app.get("/models", async (req, res) => {
     });
   }
 });
+app.get("/", async (req, res) => {
+  res.json({
+    data: "hello",
+    status: true,
+  });
+});
 
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
