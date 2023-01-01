@@ -5,7 +5,7 @@ import { Configuration, OpenAIApi } from "openai";
 
 const configuration = new Configuration({
   organization: "org-k17Bh8YcTSRdQKTjsPy9gAIb",
-  apiKey: "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",
+  apiKey: "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",
 });
 
 // const response = await openai.listEngines();
