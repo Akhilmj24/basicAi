@@ -18,8 +18,13 @@ const openai = new OpenAIApi(configuration);
 
 app.use(cookieParser());
 app.use(express.json());
-app.use(cors());
 
+app.use(
+  cors({
+    origin: "*",
+    methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
+  })
+);
 app.post("/", async (req, res) => {
   const { message, model } = req.body;
   const response = await openai.createCompletion({
