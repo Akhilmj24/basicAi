@@ -77,12 +77,12 @@ app.post("/imgecrt", async (req, res) => {
   });
   if (response.status === 200) {
     res.json({
-      data: "response.data.data",
+      data: response.data.data,
       status: true,
     });
   } else {
     res.json({
-      data: "response.data.data",
+      data: response.data.data,
       status: false,
     });
   }
